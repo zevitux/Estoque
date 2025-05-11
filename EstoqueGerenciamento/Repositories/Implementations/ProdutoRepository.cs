@@ -35,7 +35,7 @@ public class ProdutoRepository : IProdutoRepository
         return produto;
     }
 
-    public async Task<List<Produto>> ObterComEstoqueBaixp()
+    public async Task<List<Produto>> ObterComEstoqueBaixo()
     {
         _logger.LogInformation("Retornando todos os produtos com estoque baixo");
         return await _context.Produtos
@@ -71,15 +71,5 @@ public class ProdutoRepository : IProdutoRepository
         await _context.SaveChangesAsync();
         
         _logger.LogInformation("Produto removido com sucesso");
-    }
-
-    public async Task<bool> ExisteProduto(Guid id)
-    {
-        _logger.LogInformation("Verificando existencia do produto por Id: {Id}", id);
-        var existe = await _context.Produtos.AnyAsync(p => p.Id == id);
-        if(!existe)
-            _logger.LogWarning("Produto com id {Id} nao encontrado", id);
-        
-        return existe;
     }
 }

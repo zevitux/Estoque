@@ -10,5 +10,4 @@ public interface IItemPedidoRepository
     Task AdicionarAsync(ItemPedido itemPedido);
     Task AtualizarAsync(ItemPedido itemPedido);
     Task RemoverAsync(ItemPedido itemPedido);
-    Task<bool> ExisteAsync(Guid id);
 }

@@ -80,16 +80,4 @@ public class ItemPedidoRepository : IItemPedidoRepository
         
         _logger.LogInformation("Item de pedido removidado com sucesso");
     }
-
-    public async Task<bool> ExisteAsync(Guid id)
-    {
-        _logger.LogInformation("Existe pedido com Id {Id}", id);
-        
-        var existe = await _context.ItensPedido.AnyAsync(p => p.Id == id);
-        
-        if(!existe)
-            _logger.LogWarning("Nao existe item de pedido com Id {Id}", id);
-        
-        return existe;
-    }
 }

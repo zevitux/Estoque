@@ -68,15 +68,4 @@ public class FornecedorRepository : IFornecedorRepository
         
         _logger.LogInformation("Fornecedor com id {Id} removido com sucesso", fornecedor.Id);
     }
-
-    public async Task<bool> ExisteAsync(Guid id)
-    {
-        _logger.LogInformation("Existe fornecedor com Id {Id}", id);
-        var existe = await _context.Fornecedores.AnyAsync(p => p.Id == id);
-        
-        if(!existe)
-            _logger.LogWarning("Fornecedor com Id {Id} nao existe", id);
-        
-        return existe;
-    }
 }

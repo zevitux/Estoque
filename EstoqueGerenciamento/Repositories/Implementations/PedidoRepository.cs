@@ -54,7 +54,7 @@ public class PedidoRepository : IPedidoRepository
             .ToListAsync();
     }
 
-    public async Task AdicionarProdutoAsync(Pedido pedido)
+    public async Task AdicionarPedidoAsync(Pedido pedido)
     {
         _logger.LogInformation("Adicionando pedido");
         
@@ -64,7 +64,7 @@ public class PedidoRepository : IPedidoRepository
         _logger.LogInformation("Pedido adicionado com sucesso");
     }
 
-    public async Task AtualizarProdutoAsync(Pedido pedido)
+    public async Task AtualizarPedidoAsync(Pedido pedido)
     {
         _logger.LogInformation("Atualizando pedido com Id {Id}", pedido.Id);
         
@@ -74,7 +74,7 @@ public class PedidoRepository : IPedidoRepository
         _logger.LogInformation("Pedido com Id {Id} atualizado com sucesso", pedido.Id);
     }
 
-    public async Task RemoverProdutoAsync(Pedido pedido)
+    public async Task RemoverPedidoAsync(Pedido pedido)
     {
         _logger.LogInformation("Removendo pedido com Id {Id}", pedido.Id);
         
@@ -82,16 +82,5 @@ public class PedidoRepository : IPedidoRepository
         await _context.SaveChangesAsync();
         
         _logger.LogInformation("Pedido removidado com sucesso");
-    }
-
-    public async Task<bool> ExisteProduto(Guid id)
-    {
-        _logger.LogInformation("Verificando se o pedido existe");
-        var existe = await _context.Pedidos.AnyAsync(p => p.Id == id);
-        
-        if(!existe)
-            _logger.LogWarning("Produto com Id {Id} nao encontrado ou nao existe", id);
-        
-        return existe;
     }
 }

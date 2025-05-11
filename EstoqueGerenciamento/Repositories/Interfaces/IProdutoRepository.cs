@@ -6,9 +6,8 @@ public interface IProdutoRepository
 {
     Task<List<Produto>> ObterTodosAsync();
     Task<Produto> ObterPorIdAsync(Guid id);
-    Task<List<Produto>> ObterComEstoqueBaixp();
+    Task<List<Produto>> ObterComEstoqueBaixo();
     Task AdicionarProduto(Produto produto);
     Task AtualizarProduto(Produto produto);
     Task RemoverProduto(Produto produto);
-    Task<bool> ExisteProduto(Guid id);
 }
