@@ -70,6 +70,6 @@ public class ProdutoRepository : IProdutoRepository
         _context.Produtos.Remove(produto);
         await _context.SaveChangesAsync();
         
-        _logger.LogInformation("Produto removido com sucesso");
+        _logger.LogInformation("Produto com Id: {Id} removido com sucesso", produto.Id);
     }
 }
