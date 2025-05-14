@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using EstoqueGerenciamento.Data;
 using EstoqueGerenciamento.Models;
 using EstoqueGerenciamento.Repositories.Interfaces;
@@ -67,5 +68,34 @@ public class FornecedorRepository : IFornecedorRepository
         await _context.SaveChangesAsync();
         
         _logger.LogInformation("Fornecedor com id {Id} removido com sucesso", fornecedor.Id);
+    }
+    
+    public async Task<bool> ExisteCnpjAsync(string cnpj)
+    {
+        return await _context.Fornecedores
+            .AnyAsync(f => f.Cnpj == cnpj);
+    }
+
+    public async Task<Fornecedor?> ObterPorCnpjAsync(string cnpj)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(cnpj))
+                throw new ArgumentException("CNPJ não pode ser vazio");
+
+            var cnpjNumeros = Regex.Replace(cnpj, "[^0-9]", "");
+        
+            if (cnpjNumeros.Length != 14)
+                throw new ArgumentException("CNPJ deve conter 14 dígitos");
+
+            return await _context.Fornecedores
+                .AsNoTracking()
+                .FirstOrDefaultAsync(f => f.Cnpj == cnpjNumeros);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Erro ao buscar fornecedor por CNPJ: {cnpj}");
+            throw;
+        }
     }
 }

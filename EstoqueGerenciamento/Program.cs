@@ -4,6 +4,7 @@ using EstoqueGerenciamento.Repositories.Interfaces;
 using EstoqueGerenciamento.Services.Implementation;
 using EstoqueGerenciamento.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
 using Scalar.AspNetCore;
 using Serilog;
 
@@ -16,6 +17,8 @@ builder.Host.UseSerilog();
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration).CreateLogger();
 
+QuestPDF.Settings.License = LicenseType.Community;
+
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -23,6 +26,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
+
+builder.Services.AddScoped<IFornecedorRepository, FornecedorRepository>();
+builder.Services.AddScoped<IFornecedorService, FornecedorService>();
 
 var app = builder.Build();
 

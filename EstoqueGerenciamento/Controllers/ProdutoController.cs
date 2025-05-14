@@ -1,6 +1,8 @@
 using EstoqueGerenciamento.DTOs.Produto;
+using EstoqueGerenciamento.Reports;
 using EstoqueGerenciamento.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using QuestPDF.Fluent;
 
 namespace EstoqueGerenciamento.Controllers;
 
@@ -97,5 +99,16 @@ public class ProdutoController : ControllerBase
     {
         var produtos = await _produtoService.ObterComEstoqueBaixoAsync();
         return Ok(produtos);
+    }
+    
+    [HttpGet("relatorios/estoque-baixo/pdf")]
+    public async Task<IActionResult> GerarRelatorioEstoqueBaixoPdf()
+    {
+        var produtos = await _produtoService.ObterComEstoqueBaixoAsync();
+        var relatorio = new EstoqueBaixoReport(produtos.ToList());
+    
+        var pdf = relatorio.GeneratePdf();
+
+        return File(pdf, "application/pdf", "relatorio-estoque-baixo.pdf");
     }
 }

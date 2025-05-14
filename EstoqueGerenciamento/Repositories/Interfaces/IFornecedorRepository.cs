@@ -9,4 +9,6 @@ public interface IFornecedorRepository
     Task AdicionarAsync(Fornecedor fornecedor);
     Task AtualizarAsync(Fornecedor fornecedor);
     Task RemoverAsync(Fornecedor fornecedor);
+    Task<bool> ExisteCnpjAsync(string cnpj);
+    Task<Fornecedor?> ObterPorCnpjAsync(string cnpj);
 }

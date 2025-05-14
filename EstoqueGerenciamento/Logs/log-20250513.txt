@@ -1,0 +1,473 @@
+2025-05-13 19:13:52.239 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 19:14:05.153 -03:00 [INF] Retornando todos os produtos com estoque baixo
+2025-05-13 19:14:07.454 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: 
+
+
+
+Welcome to QuestPDF! 👋 
+
+QuestPDF is an open-source library committed to long-term sustainability and continuous improvement. 
+
+To maintain high-quality development and support while keeping the library free for most users, we use a fair pricing model where only larger organizations help by providing necessary funding for the project. 
+
+If your organization’s annual gross revenue exceeds $1M USD, a Commercial License is required for production use (you can freely evaluate and test QuestPDF in non-production environments at no cost). In that case, please share this information with your team or management. By purchasing a license, you directly contribute to the ongoing development and reliability of QuestPDF. 
+
+For details on the license types and determining which applies to you, please visit: https://www.questpdf.com/license/ 
+
+We trust our users. To continue, no license key is needed. Instead, simply select and configure the appropriate license in your code. For example, if you qualify for the Community license, add: 
+
+> QuestPDF.Settings.License = LicenseType.Community; 
+
+Thank you for supporting QuestPDF! ❤️ By choosing the right license, you help ensure that our project remains transparent, sustainable, and continuously improving for everyone. 🚀 
+
+
+
+
+   at QuestPDF.Drawing.DocumentGenerator.ValidateLicense()
+   at QuestPDF.Drawing.DocumentGenerator.GeneratePdf(SkWriteStream stream, IDocument document)
+   at QuestPDF.Fluent.GenerateExtensions.GeneratePdf(IDocument document)
+   at EstoqueGerenciamento.Controllers.ProdutoController.GerarRelatorioEstoqueBaixoPdf() in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\ProdutoController.cs:line 110
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-13 19:15:45.748 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 19:15:49.131 -03:00 [INF] Retornando todos os produtos com estoque baixo
+2025-05-13 19:17:59.740 -03:00 [INF] Retornando todos os produtos com estoque baixo
+2025-05-13 20:12:14.818 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:15:03.955 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'EstoqueGerenciamento.Services.Interfaces.IFornecedorService' while attempting to activate 'EstoqueGerenciamento.Controllers.FornecedorController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method8(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-13 20:16:57.973 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:17:04.416 -03:00 [INF] Adicionar fornecedor
+2025-05-13 20:17:04.626 -03:00 [INF] Fornecedor adicionado com sucesso
+2025-05-13 20:17:50.641 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:50.648 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:55.503 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:55.506 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:56.012 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:56.014 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:56.665 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:56.667 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:56.832 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:56.833 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:56.978 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:56.981 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:57.124 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:57.127 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:57.261 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:57.263 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:57.387 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:57.389 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:17:57.504 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:17:57.506 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:14.288 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:14.290 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:44.263 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:44.265 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:44.821 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:44.823 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:44.970 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:44.972 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.114 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.116 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.249 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.250 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.378 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.381 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.510 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.512 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.640 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.641 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.765 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.767 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:45.907 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:45.909 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.045 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.047 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.185 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.187 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.325 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.327 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.458 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.460 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.596 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.598 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.734 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.735 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:46.873 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:46.875 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:47.018 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:47.020 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:18:47.143 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:18:47.145 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:20:01.011 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:20:01.013 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:20:01.633 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:20:01.636 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:22:16.097 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:22:48.259 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:22:48.265 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:22:58.736 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:22:58.738 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:22:59.380 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:22:59.382 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:27:00.015 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:27:01.603 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ já cadastrado
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:27:01.609 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ já cadastrado
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:28:21.018 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:28:21.020 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:28:22.365 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:28:22.368 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:31:19.124 -03:00 [INF] Adicionar fornecedor
+2025-05-13 20:31:19.319 -03:00 [INF] Fornecedor adicionado com sucesso
+2025-05-13 20:35:49.817 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:35:55.130 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+2025-05-13 20:35:55.137 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ inválido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 27
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:48:31.689 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:48:36.520 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 23456789000102
+2025-05-13 20:48:36.523 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 23456789000102
+2025-05-13 20:48:36.524 -03:00 [WRN] CNPJ Invalido 23456789000102
+2025-05-13 20:48:36.525 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:48:36.531 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:48:37.683 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 23456789000102
+2025-05-13 20:48:37.685 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 23456789000102
+2025-05-13 20:48:37.685 -03:00 [WRN] CNPJ Invalido 23456789000102
+2025-05-13 20:48:37.686 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:48:37.687 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:49:15.379 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 23456789000102
+2025-05-13 20:49:15.381 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 23456789000102
+2025-05-13 20:49:15.382 -03:00 [WRN] CNPJ Invalido 23456789000102
+2025-05-13 20:49:15.383 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:49:15.385 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:02.092 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 2345678900013
+2025-05-13 20:50:02.093 -03:00 [WRN] CNPJ Invalido (tamanho:) 2345678900013
+2025-05-13 20:50:02.095 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:02.096 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:02.936 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 2345678900013
+2025-05-13 20:50:02.937 -03:00 [WRN] CNPJ Invalido (tamanho:) 2345678900013
+2025-05-13 20:50:02.939 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:02.940 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:06.618 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 2345678902213
+2025-05-13 20:50:06.620 -03:00 [WRN] CNPJ Invalido (tamanho:) 2345678902213
+2025-05-13 20:50:06.621 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:06.622 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido, deve conter 14 digitos
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:24.241 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678911123
+2025-05-13 20:50:24.244 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 12345678911123
+2025-05-13 20:50:24.244 -03:00 [WRN] CNPJ Invalido 12345678911123
+2025-05-13 20:50:24.245 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:24.246 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:24.738 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678911123
+2025-05-13 20:50:24.739 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 12345678911123
+2025-05-13 20:50:24.740 -03:00 [WRN] CNPJ Invalido 12345678911123
+2025-05-13 20:50:24.741 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:24.742 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:24.926 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678911123
+2025-05-13 20:50:24.927 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 12345678911123
+2025-05-13 20:50:24.928 -03:00 [WRN] CNPJ Invalido 12345678911123
+2025-05-13 20:50:24.929 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:24.930 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:25.060 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678911123
+2025-05-13 20:50:25.062 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 12345678911123
+2025-05-13 20:50:25.063 -03:00 [WRN] CNPJ Invalido 12345678911123
+2025-05-13 20:50:25.064 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:25.065 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:50:25.183 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678911123
+2025-05-13 20:50:25.185 -03:00 [WRN] CNPJ inválido (dígitos verificadores): 12345678911123
+2025-05-13 20:50:25.185 -03:00 [WRN] CNPJ Invalido 12345678911123
+2025-05-13 20:50:25.186 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+2025-05-13 20:50:25.187 -03:00 [ERR] Erro ao criar fornecedor
+System.Exception: CNPJ Invalido
+   at EstoqueGerenciamento.Services.Implementation.FornecedorService.CriarFornecedorAsync(FornecedorCreateDto fornecedorCreateDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Services\Implementation\FornecedorService.cs:line 29
+   at EstoqueGerenciamento.Controllers.FornecedorController.CriarFornecedor(FornecedorCreateDto fornecedorDto) in C:\Projetos\EstoqueGerenciamento\EstoqueGerenciamento\Controllers\FornecedorController.cs:line 28
+2025-05-13 20:52:43.688 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:52:49.097 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 34567890000103
+2025-05-13 20:52:50.396 -03:00 [INF] Validacao do fornecedor concluida com sucesso
+2025-05-13 20:52:50.399 -03:00 [INF] Adicionar fornecedor
+2025-05-13 20:52:50.606 -03:00 [INF] Fornecedor adicionado com sucesso
+2025-05-13 20:53:17.645 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 45678123000199
+2025-05-13 20:53:17.669 -03:00 [INF] Validacao do fornecedor concluida com sucesso
+2025-05-13 20:53:17.670 -03:00 [INF] Adicionar fornecedor
+2025-05-13 20:53:17.676 -03:00 [INF] Fornecedor adicionado com sucesso
+2025-05-13 20:53:29.127 -03:00 [INF] Iniciando validação do fornecedor com CNPJ: 12345678000196
+2025-05-13 20:53:29.186 -03:00 [INF] Validacao do fornecedor concluida com sucesso
+2025-05-13 20:53:29.188 -03:00 [INF] Adicionar fornecedor
+2025-05-13 20:53:29.192 -03:00 [INF] Fornecedor adicionado com sucesso
+2025-05-13 20:56:29.695 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 20:56:34.480 -03:00 [INF] Obter todos os fornecedores
+2025-05-13 20:56:44.688 -03:00 [INF] Obter fornecedores por id
+2025-05-13 21:04:39.107 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-05-13 21:05:27.441 -03:00 [INF] Obter fornecedores por id
+2025-05-13 21:05:28.976 -03:00 [INF] Atualizando fornecedor com Id "e746e88f-3fb4-49c7-558d-08dd9276436e"
+2025-05-13 21:05:29.093 -03:00 [INF] Fornecedor atualizado com sucesso
+2025-05-13 21:05:29.095 -03:00 [INF] Fornecedor ID e746e88f-3fb4-49c7-558d-08dd9276436e atualizado com sucesso
+2025-05-13 21:06:12.458 -03:00 [INF] Obter fornecedores por id
+2025-05-13 21:06:12.514 -03:00 [INF] Remover fornecedor com id "8b95282f-1671-4cd0-79c2-08dd92794517"
+2025-05-13 21:06:12.541 -03:00 [INF] Fornecedor com id "8b95282f-1671-4cd0-79c2-08dd92794517" removido com sucesso
